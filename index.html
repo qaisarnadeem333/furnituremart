@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+  <img class="logo" src="http://www.logo-designer.co/wp-content/uploads/2017/11/2017-form-logo-website-design-film-and-furniture-blog.png">
+  <a href="index.html"><i class="active"></i> Home</a>
+  <a href="product.html"><i class="  "></i> Products</a>
+  <a href="about.html"><i class="fa fa-fw fa-"></i> About</a>
+  <a href="checkout.html"><i class="fa fa-fw fa-envelope"></i>Checkout</a>
+  <a href="#"><i class="fa fa-fw fa-map-o"></i>Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- slidershow -->
+<h2 style="font-family: Matura MT Script Capitals; color: orange; text-align: center; font-size: 50px;">The Furniture Mart</h2>
+<p  style="font-family: cursive; color: red;text-align: center; color: orange;">Providing Realiable and Elegant Designs</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://www.trexfurniture.com/blog/wp-content/uploads/2016/04/Choose-the-right-Outdoor-Furniture-Trex-Furniture-FEATURED-Wide.jpg" style="width:100%">
+  <div class="text">First Image</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://images.wallpaperscraft.com/image/single/living_room_furniture_interior_high_tech_97193_2560x1080.jpg" style="width:100%">
+  <div class="text">Second Image</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://images.wallpaperscraft.com/image/single/furniture_design_white_living_room_10400_1920x1080.jpg" style="width:100%">
+  <div class="text">Third Image</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+  
+
+<!-- top nav -->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+<body>
+</html>
